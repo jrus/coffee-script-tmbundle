@@ -7,7 +7,8 @@
 	<key>command</key>
 	<string>#!/bin/bash
 
-coffee -scp --bare | pre</string>
+[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
+${TM_NODE:-node} ${TM_COFFEE:-coffee} -scp --bare | pre</string>
 	<key>fallbackInput</key>
 	<string>document</string>
 	<key>input</key>
@@ -18,6 +19,29 @@ coffee -scp --bare | pre</string>
 	<string>Compile and Display JS</string>
 	<key>output</key>
 	<string>showAsHTML</string>
+	<key>requiredCommands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>coffee</string>
+			<key>variable</key>
+			<string>TM_COFFEE</string>
+			<key>locations</key>
+			<array>
+				<string>/usr/local/bin/coffee</string>
+			</array>
+		</dict>
+		<dict>
+			<key>command</key>
+			<string>node</string>
+			<key>variable</key>
+			<string>TM_NODE</string>
+			<key>locations</key>
+			<array>
+				<string>/usr/local/bin/node</string>
+			</array>
+		</dict>
+	</array>
 	<key>scope</key>
 	<string>source.coffee</string>
 	<key>uuid</key>
