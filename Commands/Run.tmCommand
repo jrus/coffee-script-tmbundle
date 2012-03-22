@@ -8,8 +8,7 @@
 	<string>#!/bin/bash
 
 [[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
-${TM_NODE:-node} ${TM_COFFEE:-coffee} -s | pre
-</string>
+${TM_NODE:-node} ${TM_COFFEE:-coffee} -s | pre</string>
 	<key>input</key>
 	<string>selection</string>
 	<key>inputFormat</key>
@@ -24,6 +23,29 @@ ${TM_NODE:-node} ${TM_COFFEE:-coffee} -s | pre
 	<string>html</string>
 	<key>outputLocation</key>
 	<string>newWindow</string>
+	<key>requiredCommands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>coffee</string>
+			<key>locations</key>
+			<array>
+				<string>/usr/local/bin/coffee</string>
+			</array>
+			<key>variable</key>
+			<string>TM_COFFEE</string>
+		</dict>
+		<dict>
+			<key>command</key>
+			<string>node</string>
+			<key>locations</key>
+			<array>
+				<string>/usr/local/bin/node</string>
+			</array>
+			<key>variable</key>
+			<string>TM_NODE</string>
+		</dict>
+	</array>
 	<key>scope</key>
 	<string>source.coffee</string>
 	<key>uuid</key>
