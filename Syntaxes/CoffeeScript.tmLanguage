@@ -9,10 +9,6 @@
 		<string>coffee</string>
 		<string>Cakefile</string>
 	</array>
-	<key>foldingStartMarker</key>
-	<string>.*(-&gt;|=&gt;)\s*$|.*[\[{]\s*$</string>
-	<key>foldingStopMarker</key>
-	<string>^\s*$|^\s*[}\]]\s*$</string>
 	<key>keyEquivalent</key>
 	<string>^~C</string>
 	<key>name</key>
@@ -360,7 +356,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(class\b)\s+([a-zA-Z\$_]\w+)?(\s+(extends)\s+[a-zA-Z\$_]\w*)?</string>
+			<string>(\bclass\b)\s+([a-zA-Z\$_]\w+)?(\s+(extends)\s+[a-zA-Z\$_]\w*)?</string>
 			<key>name</key>
 			<string>meta.class.coffee</string>
 		</dict>
